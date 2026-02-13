@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("https://pbs.twimg.com/media/G9VlIaZXgAAO9c3.png") no-repeat center / cover;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 0;
+}
+
+.page-center {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-card {
+  width: 100%;
+  max-width: 560px;
+  padding: 46px 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  padding: 8px;
+  gap: 8px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 16px 22px;
+  font-size: 18px;
+  color: #222;
+  letter-spacing: 0.4px;
+}
+
+.search-box input::placeholder {
+  color: #777;
+}
+
+.search-box button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 242, 254, 0.45);
+}
+
+#output {
+  margin-top: 28px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  font-size: 18px;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 600px) {
+  .weather-card {
+    padding: 36px 22px;
+  }
+
+  .search-box input {
+    font-size: 16px;
+  }
+
+  #output {
+    font-size: 16px;
+  }
+}

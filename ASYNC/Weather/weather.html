@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="page-center">
+    <div class="weather-card">
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="city"
+          placeholder="Search city"
+          onkeydown="handleEnter(event)"
+        >
+        <button onclick="getWeather()">Search</button>
+      </div>
+
+      <div id="output">Search a city to see weather</div>
+
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
